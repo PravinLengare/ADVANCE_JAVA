@@ -37,7 +37,7 @@ public class RegisterServlet extends HttpServlet {
         user.setEmail(email);
         user.setPassword(password);
 
-        //UserDao userDao = new UserDaoImpl();
+        // UserDao userDao = new UserDaoImpl();
         if (userDao.addUser(user)) {
             response.sendRedirect("login.jsp?registration=success");
         } else {

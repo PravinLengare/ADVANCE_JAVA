@@ -15,12 +15,13 @@
 		    <input type="text" name="username" required><br>
 		    <label>Password:</label>
 		    <input type="password" name="password" required><br><br>
-		    <input type="submit" value="Login">
+		     
 		    <button type="submit">Login</button>
 		</form>
-        <p><a href="index.html">Back to Home</a></p>
+		<p><a href="fpassword.jsp"> Forgot password </a> </p>
+        <p> <a href="index.html">Back to Home</a> </p>
         
-      </div>s
+      </div>
         
         
          <%-- Display error message if login fails --%>

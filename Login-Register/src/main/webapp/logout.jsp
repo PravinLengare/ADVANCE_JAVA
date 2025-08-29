@@ -15,7 +15,7 @@
         	session1.invalidate();
         }
             // Redirect to the login page if the session is not valid
-            response.sendRedirect("index.html");
+            response.sendRedirect("login.jsp");
          
     %>
 

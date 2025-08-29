@@ -1,3 +1,0 @@
-127.0.0.1 - - [11/Aug/2025:17:08:41 +0530] "GET / HTTP/1.1" 404 752
-0:0:0:0:0:0:0:1 - - [11/Aug/2025:17:08:42 +0530] "GET /JavaProjectUsingJavaX/index.jsp HTTP/1.1" 200 172
-0:0:0:0:0:0:0:1 - - [11/Aug/2025:17:08:44 +0530] "GET /JavaProjectUsingJavaX/Myservlet HTTP/1.1" 200 62

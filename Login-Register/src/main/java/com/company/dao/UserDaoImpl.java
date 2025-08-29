@@ -54,4 +54,38 @@ public class UserDaoImpl implements UserDao {
             }
     	
     }
+    public boolean validEmail(String email) {
+    	String query = "SELECT * FROM user_details WHERE email = ?";
+    	try(Connection connection = DBUtil.getConnection();
+    			PreparedStatement preparedStatement = connection.prepareStatement(query)){
+    		
+    		preparedStatement.setString(1,email);
+    		ResultSet resultSet = preparedStatement.executeQuery();
+    		return resultSet.next();
+    	}
+    	catch(SQLException e) {
+    		e.printStackTrace();
+    		return false;
+    	}
+    }
+    
+    public boolean updatePassword(String email,String password) {
+    	
+    	String query = "UPDATE user_details SET password = ? WHERE email = ?";
+    	try(Connection connection = DBUtil.getConnection();
+    			PreparedStatement preparedStatement = connection.prepareStatement(query)){
+    		
+    		
+    		preparedStatement.setString(1, password);
+    		preparedStatement.setString(2, email);
+    		int rowAffected = preparedStatement.executeUpdate();
+    	
+    		return rowAffected > 0;
+    	}
+    	catch(SQLException e) {
+    		e.printStackTrace();
+    		return false;
+    		
+    	}
+    }
 }

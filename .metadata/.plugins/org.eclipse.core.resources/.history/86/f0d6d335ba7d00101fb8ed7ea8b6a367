@@ -1,7 +1,0 @@
-package com.company.util;
-
-public class DBUtil {
-	 private static final String url = "jdbc:postgresql://localhost:5432/hotel_db";
-	    private static final String username = "postgres";
-	    private static final String password = "Pravin@123";
-}
