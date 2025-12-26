@@ -7,7 +7,8 @@ public class MapI {
     public static void main(String[] args) {
         Map<String,Integer> students = new HashMap<>();
         students.put("Pravin",98);
-        students.put("Amol",78);  students.put("Suraj",99);
+        students.put("Amol",78);
+        students.put("Suraj",99);
         students.put("Suraj",99);
         students.put("Raj",91);
 
