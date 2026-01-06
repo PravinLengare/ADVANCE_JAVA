@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Main {
     public static boolean check(int i){
         if (i >= 0){
@@ -5,10 +7,17 @@ public class Main {
         }
         return false;
     }
+    public static int add (int i){
+        int add = 0 ;
+        add+=i;
+        return add;
+    }
     public static void main(String[] args) {
         /**
          * For loop modifications
          */
+
+
         // for (Initialization; Condition; Update)
 
         // 1. Modification in Initialization
@@ -37,8 +46,16 @@ public class Main {
         for(int i = 0 ; i < 3 ; System.out.println("Loop end ! "+i),i++){
             System.out.println("Loop Body "+i);
         }
-        for (int i = 0; i < 3 && check(i); i++) {
+
+        for (int i = 0; i < 3 && check(i); System.out.println(add(i)),i++) {
             System.out.println("Checking Successfully "+i);
+        }
+        ArrayList list = new ArrayList();
+        list.add("alfj");
+        list.add(12);
+
+        for (Object o : list){
+            System.out.println(o);
         }
     }
 }

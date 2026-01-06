@@ -38,6 +38,6 @@ public class UsingLoop {
         This con obj we have to pass in the method.
          */
 
-        nums.forEach(n-> System.out.println(n));
+        nums.forEach(n -> System.out.println(n));
     }
 }

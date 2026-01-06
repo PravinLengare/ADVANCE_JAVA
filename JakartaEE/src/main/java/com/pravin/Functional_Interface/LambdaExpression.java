@@ -2,7 +2,6 @@ package com.pravin.Functional_Interface;
 
 @FunctionalInterface
 interface  B{
-    //void show(int i);
     int add(int i , int j);
 
 }
@@ -29,7 +28,7 @@ public class LambdaExpression {
 
         // with return values
 
-        B obj =   (int i,int j) ->   i+j;
+        B obj =   (int i,int j) -> i+j;
 
         int result = obj.add(3,4);
         System.out.println(result);

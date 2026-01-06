@@ -14,7 +14,6 @@ public class basic {
         for(Status s : ss){
             System.out.println(s.ordinal() + " "+s);
 
-
         }
     }
 }
