@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static boolean check(int i){
@@ -12,7 +13,32 @@ public class Main {
         add+=i;
         return add;
     }
+    public static void checkingN(int a){
+        List<Integer> list = new ArrayList<>();
+        int ld = a % 10;
+        list.add(ld);
+        while(a > 0){
+            ld = a % 10;
+            a = a/10;
+            list.add(ld);
+        }
+        boolean flag = true;
+        for (Integer i:list) {
+            if (i != ld){
+                flag = false;
+            }
+        }
+        if (flag){
+            System.out.println("There is same digits");
+        }
+        else {
+            System.out.println("No same digit");
+        }
+    }
     public static void main(String[] args) {
+        int a = 555;
+        checkingN(a);
+
         /**
          * For loop modifications
          */
@@ -33,7 +59,7 @@ public class Main {
 
         // 2. Modification in Condition
 
-        for (int i = 0 ; i < 10 && i%2==0 ; i+=2) {
+        for (int i = 0 ; i < 10 && i%2 == 0 ; i+=2) {
             System.out.println(i);
         }
         for ( ; ; ) {

@@ -33,7 +33,9 @@ public class StaticOverriding {
 
         /**
          * Anonymous Class
+         * we can use var as type of t then only we can access the methods in the anonymous class
          */
+
         Test t = new Test() {
             @Override
             public void test() {
@@ -44,9 +46,14 @@ public class StaticOverriding {
             public void add() {
                 System.out.println("Adding ");
             }
+            public void doing(){
+                System.out.println("jilskfadf");
+            }
         };
         t.test();
         t.add();
+        // t.doing();
+
 
 
         /*

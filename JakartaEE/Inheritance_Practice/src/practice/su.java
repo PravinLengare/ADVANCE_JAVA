@@ -1,4 +1,5 @@
 package practice;
+
 class A1{
     public final void test(){
         System.out.println("Parent");

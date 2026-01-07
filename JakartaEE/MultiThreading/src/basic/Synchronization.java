@@ -34,7 +34,7 @@ public class Synchronization extends Thread{
             t1.join();
             t2.join();
         }catch (Exception e){
-
+            System.out.println(e.getMessage());
         }
         System.out.println(counter.getCount()); // Expected: 2000, Actual will be random <= 2000
     }
