@@ -32,7 +32,6 @@ public class BankAccount {
             if (lock.tryLock(10000, TimeUnit.MILLISECONDS)){
                 try {
                     if (balance >= amount) {
-
                         System.out.println(Thread.currentThread().getName() + " proceeding with withdrawal");
                         try {
                             Thread.sleep(3000); // Simulate time taken to process the withdrawal
@@ -50,7 +49,6 @@ public class BankAccount {
                 }catch (Exception e){
                     Thread.currentThread().interrupt();
                 }
-
 
             }
             else {

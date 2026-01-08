@@ -9,9 +9,14 @@ public class ReentrantExample {
     public void outerMethod(){
         try {
             lock.lockInterruptibly();
-            System.out.println("Outer method ");
-            innerMethod();
+            try {
+                System.out.println("Outer method ");
+                innerMethod();
+            }catch (Exception e){
+                Thread.currentThread().interrupt();
+            }
         } catch (InterruptedException e) {
+            System.out.println("I was interrupted while waiting for the lock!");
             throw new RuntimeException(e);
         }
         finally {

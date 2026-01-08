@@ -33,7 +33,7 @@ public class UsingLoop {
 
          */
         /*
-        Consumer<Integer> con = n-> System.out.println(n);
+        Consumer<Integer> con = n -> System.out.println(n);
 
         This con obj we have to pass in the method.
          */

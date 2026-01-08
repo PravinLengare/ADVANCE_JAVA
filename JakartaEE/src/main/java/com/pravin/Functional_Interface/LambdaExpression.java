@@ -27,8 +27,8 @@ public class LambdaExpression {
          */
 
         // with return values
-
-        B obj =   (int i,int j) -> i+j;
+        //    parameters -> impl
+        B obj =   (i,j) -> i+j;
 
         int result = obj.add(3,4);
         System.out.println(result);

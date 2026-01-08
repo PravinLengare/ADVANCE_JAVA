@@ -4,7 +4,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class FairnessExample {
-    private final Lock lock = new ReentrantLock(true);  // avoid starvation
+    private final Lock lock = new ReentrantLock(true);  // avoid starvation first ,come first served
 
     void acquireLock(){
         lock.lock();

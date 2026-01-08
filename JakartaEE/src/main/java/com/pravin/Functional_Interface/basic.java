@@ -4,7 +4,6 @@ package com.pravin.Functional_Interface;
 interface A {
     void show();
 }
-
 public class basic {
     public static void main(String[] args) {
         A a = new A(){

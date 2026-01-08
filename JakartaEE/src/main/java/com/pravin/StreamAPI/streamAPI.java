@@ -32,7 +32,7 @@ public class streamAPI {
 
         int result = nums.stream()
                 .filter(n -> n%2==0)
-                .map(n-> n*2)
+                .map(n -> n*2)
                 .reduce(0,(c,e)-> c+e);
 
         System.out.println(result);
