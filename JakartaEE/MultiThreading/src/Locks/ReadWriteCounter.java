@@ -5,7 +5,7 @@ import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class ReadWriteCounter {
-    int count = 0;
+    private int count = 0;
     private final ReadWriteLock lock = new ReentrantReadWriteLock();
     private final Lock readLock = lock.readLock();
     private final Lock writeLock = lock.writeLock();
@@ -22,9 +22,16 @@ public class ReadWriteCounter {
         }
     }
 
+
     public int getCount() {
         readLock.lock();
         try {
+            /**
+             -- after the exit the finally block will not ,going to run because the jvm will stop after exit()
+             -- instead if there is return statement then finally will execute
+             */
+
+            // System.exit(1);
             return count;
         }
         finally {
