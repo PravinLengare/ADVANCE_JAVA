@@ -27,7 +27,7 @@ public class UsingTheMethods {
          * but if we use the Executor Service interface then we have the access to , shutdown the threads
          */
 
-        ExecutorService executor = Executors.newFixedThreadPool(3);
+        ExecutorService executor = Executors.newFixedThreadPool(5);
         //Executor executor = Executors.newFixedThreadPool(3);
         for (int j = 1; j < 10; j++) {
             int finalI = j;
@@ -37,8 +37,19 @@ public class UsingTheMethods {
             });
 
         }
-
         executor.shutdown();
+        /**
+         * not allowed after the shutdown -> then it will not take any task to do it will throw errors.
+         */
+//        executor.submit(()-> {
+//            long result = 2;
+//            System.out.println(result);
+//        });
+        while (! executor.awaitTermination(1,TimeUnit.MILLISECONDS)){
+            System.out.println("Waiting.......");
+            executor.shutdownNow();
+        }
+
         System.out.println("The time required is "+(System.currentTimeMillis() - startTime));
     }
         // elicit ,paper-pal,julisus
