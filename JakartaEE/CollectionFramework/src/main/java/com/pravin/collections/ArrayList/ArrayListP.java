@@ -1,4 +1,4 @@
-package com.pravin.collections;
+package com.pravin.collections.ArrayList;
 
 
 import java.util.ArrayList;
