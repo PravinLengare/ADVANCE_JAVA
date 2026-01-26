@@ -9,6 +9,7 @@ public class VectorDem {
          *  - same as arrayList ,but it is synchronized (Thread safe)
          *  - In single threaded environment use the ArrayList and multi-Threaded env use Vectors
          *  - Doubles the capacity of the vector
+         *  - Useful in multi-Threaded application
          */
 
         Vector<Integer> vector = new Vector<>();
