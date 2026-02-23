@@ -11,7 +11,8 @@ public class HashCodeAndEqualsMethod {
         Person p3 = new Person("Alice", 1);
 
         System.out.println("On basis of memory : "+System.identityHashCode(p1));
-        System.out.println("On basis of values : "+p1.hashCode());
+        System.out.println("On basis of values p1: "+p1.hashCode());
+        System.out.println("On basis of values p3: "+p3.hashCode());
 
 
         map.put(p1, "Engineer");
